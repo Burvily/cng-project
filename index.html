@@ -3,109 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delta State CNG Mass Transit Initiative</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Delta State CNG Mass Transit Initiative - Revenue Generation Focus</title>
+    
+    <!-- External Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        .slide-nav {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 8px;
-            padding: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            display: none;
-        }
-        .slide-nav.active {
-            display: block;
-        }
-        .slide-nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .slide-nav li {
-            margin: 5px 0;
-        }
-        .slide-nav a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-size: 14px;
-            display: block;
-            padding: 5px 10px;
-            border-radius: 4px;
-        }
-        .slide-nav a:hover {
-            background-color: rgba(0, 100, 0, 0.1);
-        }
-        .nav-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            font-size: 20px;
-            cursor: pointer;
-            z-index: 1001;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .print-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: var(--accent-color);
-            color: black;
-            border: none;
-            border-radius: 4px;
-            padding: 8px 16px;
-            font-size: 14px;
-            cursor: pointer;
-            z-index: 1001;
-        }
-    </style>
-<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+    
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <button class="nav-toggle" id="navToggle">≡</button>
-    <nav class="slide-nav" id="slideNav">
-        <ul>
-            <li><a href="#slide1">Cover</a></li>
-            <li><a href="#slide2">Problem & Solution</a></li>
-            <li><a href="#slide3">Why CNG?</a></li>
-            <li><a href="#slide4">Revenue Model</a></li>
-            <li><a href="#slide5">Financial Assumptions</a></li>
-            <li><a href="#slide6">CapEx Breakdown</a></li>
-            <li><a href="#slide7">Cost Savings</a></li>
-            <li><a href="#slide8">PPP Option</a></li>
-            <li><a href="#slide9">ROI & Projection</a></li>
-            <li><a href="#slide10">Case Studies</a></li>
-            <li><a href="#slide11">Implementation Plan</a></li>
-            <li><a href="#slide12">Fleet & Infrastructure</a></li>
-            <li><a href="#slide13">Environmental Benefits</a></li>
-            <li><a href="#slide14">Conclusion</a></li>
-        </ul>
-    </nav>
-    <button class="print-button" onclick="window.print()">Print Presentation</button>
+    <!-- Navigation Toggle -->
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span class="nav-icon">≡</span>
+    </button>
+    
+            <!-- Slide Navigation -->
+        <nav class="slide-nav" id="slideNav" aria-label="Slide navigation">
+            <ul>
+                <li><a href="#slide1">Cover</a></li>
+                <li><a href="#slide2">Problem & Solution</a></li>
+                <li><a href="#slide3">Why CNG?</a></li>
+                <li><a href="#slide4">Fleet & Infrastructure</a></li>
+                <li><a href="#slide5">Model Specifications</a></li>
+                <li><a href="#slide6">Bus Gallery</a></li>
+                <li><a href="#slide7">Smart Fleet Technology</a></li>
+                <li><a href="#slide8">Financial Assumptions</a></li>
+                <li><a href="#slide9">Revenue Model</a></li>
+                <li><a href="#slide10">Implementation Plan</a></li>
+                <li><a href="#slide11">Case Studies</a></li>
+                <li><a href="#slide12">Our Partners</a></li>
+                <li><a href="#slide13">Environmental Benefits</a></li>
+                <li><a href="#slide14">Conclusion</a></li>
+                <li><a href="#annex">CNG Mother Station</a></li>
+            </ul>
+        </nav>
+    
+    <!-- Print Button -->
+    <button class="print-button" onclick="window.print()" aria-label="Print presentation">
+        <span class="print-icon">🖨️</span>
+        Print Presentation
+    </button>
+    
+    <!-- Main Presentation Container -->
     <div class="presentation-container">
         <!-- Slide 1: Cover Slide -->
         <div id="slide1" class="slide cover-slide">
             <div class="slide-content">
                 <h1>Delta State CNG Mass Transit Initiative</h1>
-                <h2>Cleaner, Cheaper, Smarter Transportation for Our Cities</h2>
+                <h2>Revenue Generation & Smart Mobility Focus</h2>
                 <div class="logo-container">
-                    <div>
-                        <img src="images/delta_state_logo.png" alt="Delta State Logo" class="logo" id="delta-logo">
+                    <div class="logo-item">
+                        <img src="assets/delta_state_logo.png" alt="Delta State Logo" class="logo delta-logo">
+                        <span class="logo-label">Delta State</span>
                     </div>
-                    <div>
-                        <img src="images/origin_innovation_logo.png" alt="Origin Innovation Logo" class="logo" id="origin-logo">
+                    <div class="logo-item">
+                        <img src="assets/origin_innovation_logo.png" alt="Origin Innovation Logo" class="logo origin-logo">
+                        <span class="logo-label">Origin Innovation</span>
                     </div>
                 </div>
                 <div class="footer">
@@ -120,8 +80,10 @@
                 <div class="slide-header">
                     <h2>The Problem & Solution 🏙️</h2>
                 </div>
-                <div class="split-content">
-                    <div class="column">
+                
+                <!-- Problem Section with Image -->
+                <div class="problem-solution-section">
+                    <div class="problem-column">
                         <h3>The Problem</h3>
                         <ul class="bullet-list">
                             <li>Skyrocketing fuel costs: PMS at ₦1050/L, Diesel at ₦1,700/L (Delta state)</li>
@@ -130,25 +92,35 @@
                             <li>Aging, inefficient transport fleet</li>
                             <li>High maintenance costs for operators</li>
                         </ul>
+                        <div class="problem-image">
+                            <img src="assets/diesel_bus_pollution.jpg" alt="Diesel Bus Pollution" class="comparison-img">
+                            <p class="image-label">Current State: Pollution & Inefficiency</p>
+                        </div>
                     </div>
-                    <div class="column">
+                    
+                    <!-- Solution Section with Image -->
+                    <div class="solution-column">
                         <h3>The Solution</h3>
                         <ul class="bullet-list">
-                            <li>Modern CNG-powered mass transit buses</li>
+                            <li>Modern CNG-powered mini/midi buses</li>
                             <li>Fuel cost reduction of up to 60%</li>
                             <li>Significantly reduced emissions</li>
                             <li>Lower maintenance requirements</li>
                             <li>Affordable fares for citizens</li>
                         </ul>
+                        <div class="solution-image">
+                            <img src="assets/cng_bus_clean.jpg" alt="Clean CNG Bus" class="comparison-img">
+                            <p class="image-label">Our Proposition: Clean & Efficient CNG powered buses</p>
+                        </div>
                     </div>
                 </div>
-                <div class="image-container">
-                    <div class="comparison-image">
-                        <img src="images/diesel_bus_pollution.jpg" alt="Diesel Bus Pollution" class="slide-image">
-                        <img src="images/cng_bus_clean.jpg" alt="Clean CNG Bus" class="slide-image">
-                    </div>
-                    <p><em>"From pollution to solution: The CNG difference for Delta State"</em></p>
+                
+                <!-- Central Caption -->
+                <div class="central-caption">
+                    <p class="image-caption"><em>"From pollution to solution: The CNG difference for Delta State"</em></p>
+                    <p class="initiative-name">Delta State CNG Mass Transit Initiative</p>
                 </div>
+                
                 <div class="footer">
                     <p>Delta State CNG Mass Transit Initiative</p>
                 </div>
@@ -197,7 +169,7 @@
                     </div>
                 </div>
                 <div class="image-container">
-                    <img src="images/modern_cng_bus.jpg" alt="Modern CNG Bus in Operation" class="slide-image">
+                    <img src="assets/modern_cng_bus.jpg" alt="Modern CNG Bus in Operation" class="slide-image">
                     <p><em>"Modern, efficient, and environmentally friendly: CNG buses in action"</em></p>
                 </div>
                 <div class="footer">
@@ -206,8 +178,278 @@
             </div>
         </div>
 
-        <!-- Slide 4: Revenue Model (Detailed) -->
+        <!-- Slide 4: Fleet & Infrastructure -->
         <div id="slide4" class="slide">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <h2>Fleet & Infrastructure 🔧</h2>
+                </div>
+                <div class="split-content">
+                    <div class="column">
+                        <h3>Recommended Fleet</h3>
+                        <ul class="bullet-list">
+                            <li>
+                                <strong>KING LONG XMQ6127G</strong> – 41 passenger capacity, Advanced CNG engine, Low floor access, 7×120L cylinder, Modern amenities
+                            </li>
+                            <li>
+                                <strong>KING LONG XMQ6940G</strong> – 30 passenger capacity, Advanced CNG engine, Low floor access, 6×120L cylinder, Modern amenities
+                            </li>
+                        </ul>
+
+                        <h3>Maintenance Support</h3>
+                        <ul class="bullet-list">
+                            <li>Local spare parts inventory</li>
+                            <li>Specialized CNG technician training</li>
+                            <li>Mobile maintenance units</li>
+                            <li>Preventive maintenance scheduling</li>
+                        </ul>
+                    </div>
+
+                    <div class="column">
+                        <h3>CNG Infrastructure</h3>
+                        <ul class="bullet-list">
+                            <li><strong>Training & Service Facilities:</strong> CNG Training centers, Service & maintenance centers across Delta State, Independent CTMC, Spare parts inventory management</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>Safety Features</h3>
+                    <p>All CNG buses are equipped with advanced safety features including leak detection systems, automatic shutdown valves, and reinforced CNG tanks that exceed international safety standards. CNG is actually safer than liquid fuels in many accident scenarios.</p>
+                </div>
+
+                <div class="footer">
+                    <p>Delta State CNG Mass Transit Initiative</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Slide 5: Model Specifications -->
+        <div id="slide5" class="slide">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <h2>Model Specifications 📋</h2>
+                </div>
+                <div class="pdf-container">
+                    <iframe src="Model Specification details.pdf" width="100%" height="600px" frameborder="0"></iframe>
+                    <p class="pdf-caption"><em>Detailed technical specifications for the CNG bus fleet</em></p>
+                </div>
+                <div class="footer">
+                    <p>Delta State CNG Mass Transit Initiative</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Bus Gallery -->
+        <div id="slide6" class="slide">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <h2>Bus Gallery 📸</h2>
+                </div>
+                <div class="gallery-container">
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="assets/cng_bus_clean.jpg" alt="YUTONG E12 PRO Exterior" class="gallery-image" onclick="openModal(this.src, 'Clean CNG buses in array')">
+                            <div class="gallery-caption">Clean CNG buses in array</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/view-1.jpg" alt="YUTONG E12 PRO Interior" class="gallery-image" onclick="openModal(this.src, 'Exterior view of model XMQ6127G')">
+                            <div class="gallery-caption">Exterior view of model XMQ6127G</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/view-2.jpg" alt="CNG Bus Interior" class="gallery-image" onclick="openModal(this.src, 'CNG Bus Interior')">
+                            <div class="gallery-caption">CNG Bus Interior</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/view-3.jpg" alt="CNG Refueling" class="gallery-image" onclick="openModal(this.src, 'Front bus exterior')">
+                            <div class="gallery-caption">Front bus exterior</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/view-4.jpg" alt="Clean CNG Bus" class="gallery-image" onclick="openModal(this.src, 'Rear bus exterior')">
+                            <div class="gallery-caption">Rear bus exterior</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/view-5.jpg" alt="Modern CNG Bus" class="gallery-image" onclick="openModal(this.src, 'Interior view')">
+                            <div class="gallery-caption">Interior view</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/view-6.jpg" alt="CNG Bus Concept" class="gallery-image" onclick="openModal(this.src, 'CNG Bus interior')">
+                            <div class="gallery-caption">CNG Bus interior</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/view-7.png" alt="CNG Bus Innovation" class="gallery-image" onclick="openModal(this.src, 'Exterior view')">
+                            <div class="gallery-caption">Exterior view</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-description">
+                    <p><em>Explore our comprehensive fleet of modern, efficient, and environmentally friendly CNG buses designed for Delta State's transportation needs.</em></p>
+                </div>
+                <div class="footer">
+                    <p>Delta State CNG Mass Transit Initiative</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Smart Fleet Technology Advantage -->
+        <div id="slide7" class="slide">
+            <div class="slide-content">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h2>Beyond Buses: Building a Smart Mobility Ecosystem for Delta State</h2>
+                    </div>
+                    
+                    <!-- CTMC Overview Section -->
+                    <div class="ctmc-overview">
+                        <h3>CNG Transport Management Centre (CTMC)</h3>
+                        <p class="ctmc-description">An independent, state-of-the-art command center designed to revolutionize Delta State's public transportation through advanced technology integration and real-time data management.</p>
+                    </div>
+                    
+                    <div class="split-content">
+                        <div class="column">
+                            <h3>Smart Fleet Technology Features</h3>
+                            <ul class="bullet-list">
+                                <li>Real-time GPS tracking of all buses</li>
+                                <li>Automated service reports (distance, fuel, uptime/downtime)</li>
+                                <li>AI-powered route scheduling & optimization</li>
+                                <li>Driver performance & assignment logs</li>
+                                <li>Passenger seat monitoring</li>
+                                <li>Cashless fare collection for transparency</li>
+                            </ul>
+                            
+                            <h3>Revenue Tracking & Digital Fare Collection</h3>
+                            <ul class="bullet-list">
+                                <li>GPS data integration for fare calculation</li>
+                                <li>Smartcard payment systems</li>
+                                <li>QR code payment integration</li>
+                                <li>Real-time revenue monitoring</li>
+                                <li>Automated fare reconciliation</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h3>Fleet Management Systems</h3>
+                            <ul class="bullet-list">
+                                <li>Centralized fleet monitoring dashboard</li>
+                                <li>Predictive maintenance scheduling</li>
+                                <li>Fuel consumption analytics</li>
+                                <li>Route optimization algorithms</li>
+                                <li>Emergency response coordination</li>
+                                <li>Driver training and certification tracking</li>
+                            </ul>
+                            
+                            <h3>Government Oversight Dashboard</h3>
+                            <ul class="bullet-list">
+                                <li>Real-time passenger count data</li>
+                                <li>Revenue performance metrics</li>
+                                <li>Environmental impact tracking</li>
+                                <li>Service quality indicators</li>
+                                <li>Compliance monitoring</li>
+                                <li>Performance benchmarking reports</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- CTMC Picture Grid -->
+                    <div class="ctmc-picture-grid">
+                        <h3>CTMC Facility & Operations</h3>
+                        <div class="ctmc-grid">
+                            <div class="ctmc-image-card square">
+                                <img src="assets/cmdc.png" alt="CNG Transport Management Centre" class="ctmc-image">
+                                <div class="image-caption">CTMC Building & Operations Center</div>
+                            </div>
+                            <div class="ctmc-image-card landscape">
+                                <img src="assets/digital-dashboard-mock-up.png" alt="Digital Dashboard Mock-up" class="ctmc-image">
+                                <div class="image-caption">Smart Fleet Management Dashboard</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="closing-tagline">
+                        <p><strong>"Every bus is a data point. Every kilometer is accountable. Every fare is transparent."</strong></p>
+                    </div>
+                    <div class="footer">
+                        <p>Delta State CNG Mass Transit Initiative</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Financial Assumptions -->
+        <div id="slide8" class="slide">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <h2>Financial Assumptions 📑</h2>
+                </div>
+                <div class="split-content">
+                    <div class="column">
+                        <h3>Fleet & Operations</h3>
+                        <ul class="bullet-list">
+                            <li>Pilot fleet: 50 city Mass Transit Buses</li>
+                            <li>Daily operation: 200 km per bus</li>
+                            <li>CNG consumption: 40 kg/day per bus</li>
+                            <li>Passenger capacity: 30-40 per bus</li>
+                            <li>Operational days: 30 days/month</li>
+                        </ul>
+                        
+                        <h3>Maintenance</h3>
+                        <ul class="bullet-list">
+                            <li>CNG maintenance: 15% cheaper than diesel</li>
+                            <li>Extended service intervals</li>
+                            <li>Reduced engine wear and tear</li>
+                            <li>Lower lubricant consumption</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3>Fuel Pricing</h3>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Fuel Type</th>
+                                    <th>Current Price</th>
+                                    <th>Unit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>CNG</td>
+                                    <td>₦230</td>
+                                    <td>per kg</td>
+                                </tr>
+                                <tr>
+                                    <td>Diesel</td>
+                                    <td>₦1,700</td>
+                                    <td>per liter</td>
+                                </tr>
+                                <tr>
+                                    <td>Petrol (PMS)</td>
+                                    <td>₦1050</td>
+                                    <td>per liter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <h3>Revenue Focus</h3>
+                        <ul class="bullet-list">
+                            <li>Primary focus on revenue generation</li>
+                            <li>Multiple revenue streams for sustainability</li>
+                            <li>Operational efficiency for cost control</li>
+                            <li>Scalable business model</li>
+                        </ul>
+                        
+                        <div class="highlight-box">
+                            <p><strong>Key Insight:</strong> Our focus is on maximizing revenue while maintaining operational efficiency through CNG technology.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <p>Delta State CNG Mass Transit Initiative</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Revenue Model (Detailed) -->
+        <div id="slide9" class="slide">
             <div class="slide-content">
                 <div class="slide-header">
                     <h2>Revenue Model (Detailed) 💰</h2>
@@ -233,7 +475,7 @@
                         <div class="chart-container">
                             <canvas id="revenueChart"></canvas>
                         </div>
-                        <p><em>"Multiple revenue streams create a sustainable business model with significant returns"</em></p>
+                        <p class="chart-caption"><em>"Multiple revenue streams create a sustainable business model with significant returns"</em></p>
                     </div>
                 </div>
                 <table class="data-table">
@@ -278,390 +520,70 @@
             </div>
         </div>
 
-        <!-- Slide 5: Financial Assumptions -->
-        <div id="slide5" class="slide">
+        <!-- Slide 10: Implementation Plan -->
+        <div id="slide10" class="slide">
             <div class="slide-content">
                 <div class="slide-header">
-                    <h2>Financial Assumptions 📑</h2>
+                    <h2>Implementation Plan 🗺️</h2>
                 </div>
                 <div class="split-content">
                     <div class="column">
-                        <h3>Fleet & Operations</h3>
-                        <ul class="bullet-list">
-                            <li>Pilot fleet: 50 city Mass Transit Buses</li>
-                            <li>Daily operation: 200 km per bus</li>
-                            <li>CNG consumption: 40 kg/day per bus</li>
-                            <li>Passenger capacity: 30-40 per bus</li>
-                            <li>Operational days: 26 days/month</li>
-                        </ul>
-                        
-                        <h3>Maintenance</h3>
-                        <ul class="bullet-list">
-                            <li>CNG maintenance: 15% cheaper than diesel</li>
-                            <li>Extended service intervals</li>
-                            <li>Reduced engine wear and tear</li>
-                            <li>Lower lubricant consumption</li>
-                        </ul>
-                    </div>
-                    <div class="column">
-                        <h3>Fuel Pricing</h3>
-                        <table class="data-table">
-                            <thead>
-                                <tr>
-                                    <th>Fuel Type</th>
-                                    <th>Current Price</th>
-                                    <th>Unit</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>CNG</td>
-                                    <td>₦230</td>
-                                    <td>per kg</td>
-                                </tr>
-                                <tr>
-                                    <td>Diesel</td>
-                                    <td>₦1,700</td>
-                                    <td>per liter</td>
-                                </tr>
-                                <tr>
-                                    <td>Petrol (PMS)</td>
-                                    <td>₦1050</td>
-                                    <td>per liter</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        
-                        <h3>Monthly Operating Expenses (OpEx)</h3>
-                        <ul class="bullet-list">
-                            <li>CNG Bus: ≈ ₦1,280,000</li>
-                            <li>Diesel Bus: ≈ ₦3,190,000</li>
-                            <li>Petrol Bus: ≈ ₦2,460,000</li>
-                        </ul>
-                        
-                        <div class="highlight-box">
-                            <p><strong>Key Insight:</strong> CNG buses operate at approximately 40% of the cost of diesel buses and 52% of petrol buses.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="chart-container">
-                    <canvas id="opexChart"></canvas>
-                </div>
-                <div class="footer">
-                    <p>Delta State CNG Mass Transit Initiative</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 6: CapEx Breakdown -->
-        <div id="slide6" class="slide">
-            <div class="slide-content">
-                <div class="slide-header">
-                    <h2>CapEx Breakdown & Financial Notes 📊</h2>
-                </div>
-                <div class="split-content">
-                    <div class="column">
-                        <h3>Bus Procurement & Shipping Details</h3>
-                        <table class="data-table">
-                            <thead>
-                                <tr>
-                                    <th>Cost Component</th>
-                                    <th>Per Unit ($)</th>
-                                    <th>Per Unit (₦)</th>
-                                    <th>Total for 50 Buses (₦)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Bus Unit FOB Price</td>
-                                    <td>$118,000</td>
-                                    <td>₦181,012,000</td>
-                                    <td>₦9,050,600,000</td>
-                                </tr>
-                                <tr>
-                                    <td>Estimated Freight</td>
-                                    <td>$13,685</td>
-                                    <td>₦20,992,790</td>
-                                    <td>₦1,049,639,500</td>
-                                </tr>
-                                <tr>
-                                    <td>CFR (Cost & Freight)</td>
-                                    <td>$131,685</td>
-                                    <td>₦202,004,790</td>
-                                    <td>₦10,100,239,500</td>
-                                </tr>
-                                <tr>
-                                    <td>Contingency (15% freight)</td>
-                                    <td>$2,050</td>
-                                    <td>₦3,144,700</td>
-                                    <td>₦157,235,000</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Adjusted CFR (with contingency)</strong></td>
-                                    <td><strong>$133,735</strong></td>
-                                    <td><strong>₦205,149,490</strong></td>
-                                    <td><strong>₦10,257,474,500</strong></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="column">
-                        <div class="chart-container">
-                            <canvas id="capexChart"></canvas>
-                        </div>
-                        
-                        <div class="highlight-box">
-                            <h3>⚠️ Important Financial Note</h3>
-                            <p>"Due to hazardous cargo restrictions, conventional Ro-Ro and Breakbulk vessels may not always be suitable for transporting CNG buses. A 15% freight contingency buffer has been included to mitigate cost escalation risk."</p>
-                        </div>
-                        
-                        <div class="highlight-box">
-                            <h3>Exchange Rate Used</h3>
-                            <p>All USD to Naira conversions calculated at ₦1534 per dollar.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer">
-                    <p>Delta State CNG Mass Transit Initiative</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Slide 7: Practical Cost Savings Example -->
-        <div id="slide7" class="slide">
-            <div class="slide-content">
-                <div class="slide-header">
-                    <h2>Practical Cost Savings Example 📉</h2>
-                </div>
-                <div class="split-content">
-                    <div class="column">
-                        <h3>Monthly Savings Per Bus</h3>
-                        <table class="data-table">
-                            <thead>
-                                <tr>
-                                    <th>Expense Category</th>
-                                    <th>CNG Bus (₦)</th>
-                                    <th>Diesel Bus (₦)</th>
-                                    <th>Savings (₦)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Fuel Cost</td>
-                                    <td>478,400</td>
-                                    <td>2,210,000</td>
-                                    <td>1,731,600</td>
-                                </tr>
-                                <tr>
-                                    <td>Maintenance</td>
-                                    <td>340,000</td>
-                                    <td>400,000</td>
-                                    <td>60,000</td>
-                                </tr>
-                                <tr>
-                                    <td>Lubricants</td>
-                                    <td>45,000</td>
-                                    <td>65,000</td>
-                                    <td>20,000</td>
-                                </tr>
-                                <tr>
-                                    <td>Other OpEx</td>
-                                    <td>416,600</td>
-                                    <td>515,000</td>
-                                    <td>98,400</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Total</strong></td>
-                                    <td><strong>1,280,000</strong></td>
-                                    <td><strong>3,190,000</strong></td>
-                                    <td><strong>1,910,000</strong></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="column">
-                        <div class="chart-container">
-                            <canvas id="savingsChart"></canvas>
-                        </div>
-                        
-                        <div class="highlight-box">
-                            <h3>Fleet-Wide Impact</h3>
-                            <p>Monthly savings with 50 buses: <strong>₦95,500,000</strong></p>
-                            <p>Annual savings with 50 buses: <strong>₦1,146,000,000</strong></p>
-                            <p>That's over <strong>₦1.1 billion in savings per year!</strong></p>
-                        </div>
-                    </div>
-                </div>
-                <p><em>"The numbers speak for themselves: CNG delivers dramatic cost reductions while improving service quality"</em></p>
-                <div class="footer">
-                    <p>Delta State CNG Mass Transit Initiative</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 8: PPP Option - Unlocking Private Capital -->
-        <div id="slide8" class="slide">
-            <div class="slide-content">
-                <div class="slide-header">
-                    <h2>PPP Option - Unlocking Private Capital 💼</h2>
-                </div>
-                <div class="split-content">
-                    <div class="column">
-                        <h3>Government-Funded Infrastructure</h3>
-                        <ul class="bullet-list">
-                            <li>High upfront CapEx (~₦3-4B for initial 3-4 stations)</li>
-                            <li>Total investment: ~₦10.25B</li>
-                            <li>Slower ROI but more long-term control</li>
-                            <li>Higher borrowing requirements</li>
-                            <li>Breakeven point: ~5 years</li>
-                        </ul>
-                        
-                        <div class="highlight-box">
-                            <h3>Government Responsibilities</h3>
+                        <div class="phase-box">
+                            <div class="phase-title">Phase 1: Pilot</div>
                             <ul class="bullet-list">
-                                <li>Bus fleet procurement</li>
-                                <li>Infrastructure development</li>
-                                <li>Operations management</li>
-                                <li>Maintenance and servicing</li>
+                                <li>Deploy 50 CNG buses in Asaba & Warri</li>
+                                <li>Train drivers and maintenance staff</li>
+                                <li>Establish monitoring systems</li>
+                                <li>Gather operational data and feedback</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="phase-box">
+                            <div class="phase-title">Phase 2: Expansion (year 2)</div>
+                            <ul class="bullet-list">
+                                <li>Expand to 6 major hubs across Delta State</li>
+                                <li>Increase fleet to 150 buses</li>
+                                <li>Implement digital payment systems</li>
+                                <li>Optimize routes based on Phase 1 data</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="phase-box">
+                            <div class="phase-title">Phase 3: Statewide Rollout (year 5)</div>
+                            <ul class="bullet-list">
+                                <li>Expand to all major cities and towns</li>
+                                <li>Scale to 300+ buses</li>
+                                <li>Comprehensive CNG infrastructure network</li>
+                                <li>Integration with other transport modes</li>
+                                <li>Full digital operations platform</li>
                             </ul>
                         </div>
                     </div>
                     <div class="column">
-                        <h3>PPP-Funded Infrastructure ✅</h3>
-                        <ul class="bullet-list">
-                            <li>Reduced government CapEx (only buses, training, monitoring)</li>
-                            <li>Total government investment: ~₦10.2B</li>
-                            <li>Private partners bear station costs (~₦3.75B)</li>
-                            <li>Government still earns via fuel sales commission</li>
-                            <li>Faster ROI: ~3.5 years</li>
-                            <li>More politically attractive (less borrowing)</li>
-                        </ul>
+                        <div class="map-container">
+                            <img src="assets/delta_state_map.jpg" alt="Delta State Implementation Map" class="map-img">
+                        </div>
                         
                         <div class="highlight-box">
-                            <h3>Government Focus Areas</h3>
+                            <h3>Key Implementation Milestones</h3>
                             <ul class="bullet-list">
-                                <li>Policy and regulation</li>
-                                <li>Demand assurance</li>
-                                <li>Quality monitoring</li>
-                                <li>Revenue through commissions per kg sold</li>
+                                <li>Month 1: Feasibility study completion</li>
+                                <li>Month 3: First 50 buses delivered</li>
+                                <li>Month 4: Training and Service center operational</li>
+                                <li>Month 6: Full pilot fleet operational</li>
+                                <li>Month 24: 50% of target routes covered</li>
+                                <li>Month 36: Complete statewide coverage</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="chart-container">
-                    <canvas id="pppComparisonChart"></canvas>
-                </div>
-                <div class="image-container">
-                    <img src="images/cng_refueling.jpg" alt="Private CNG Station" class="slide-image">
-                    <p><em>"Private CNG stations in operation - representing successful PPP implementation"</em></p>
-                </div>
-                <div class="footer">
-                    <p>Delta State CNG Mass Transit Initiative</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Slide 9: ROI & 10-Year Projection -->
-        <div id="slide9" class="slide">
-            <div class="slide-content">
-                <div class="slide-header">
-                    <h2>ROI & 10-Year Projection 📈</h2>
-                </div>
-                <div class="chart-container" style="height: 400px;">
-                    <canvas id="roiChart"></canvas>
-                </div>
-                <div class="split-content">
-                    <div class="column">
-                        <h3>Government-Funded Model</h3>
-                        <ul class="bullet-list">
-                            <li>Initial investment: ₦10.2B total</li>
-                            <li>Bus fleet: </li>
-                            <li>- FOB Bus Cost: ₦9.05B (50 buses at $118,000 × ₦1534)</li>
-                            <li>- Freight: ₦1.05B (50 units at $13,685 × ₦1534)</li>
-                            <li>- Freight Contingency (15%): ₦0.16B</li>
-                            <li>Infrastructure: ₦3.75B (stations, training, service centers)</li>
-                            <li>Breakeven point: ~5.2 years</li>
-                            <li>10-year ROI: 310%</li>
-                            <li>IRR: 19.0%</li>
-                        </ul>
-                    </div>
-                    <div class="column">
-                        <h3>PPP Model (Recommended)</h3>
-                        <ul class="bullet-list">
-                            <li>Government investment: ₦10.2B</li>
-                            <li>- FOB Bus Cost: ₦9.05B (50 buses at $118,000 × ₦1534)</li>
-                            <li>- Freight: ₦1.05B (50 units at $13,685 × ₦1534)</li>
-                            <li>- Freight Contingency (15%): ₦0.16B</li>
-                            <li>Private investment: ₦2.75B (stations)</li>
-                            <li>Breakeven point: ~3.7 years</li>
-                            <li>10-year ROI: 410%</li>
-                            <li>IRR: 24.2%</li>
-                            <li>Revenue sharing: Government earns ₦20/kg commission</li>
-                        </ul>
-                        
-                        <div class="highlight-box">
-                            <p><strong>Key Insight:</strong> The PPP model becomes cash-flow positive in Year 2 and fully recovers investment by Year 3.5, while requiring 38% less government capital.</p>
-                        </div>
-                    </div>
-                </div>
-                <h3 style="text-align: center; margin-top: 20px;">Financial Comparison: Government vs PPP Model</h3>
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th rowspan="2">Year</th>
-                            <th rowspan="2">Fleet Size</th>
-                            <th colspan="2">Government Model</th>
-                            <th colspan="2">PPP Model</th>
-                        </tr>
-                        <tr>
-                            <th>Annual Profit (₦B)</th>
-                            <th>Cumulative ROI</th>
-                            <th>Annual Profit (₦B)</th>
-                            <th>Cumulative ROI</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Year 1</td>
-                            <td>50</td>
-                            <td>-0.32</td>
-                            <td>-4.1%</td>
-                            <td>-0.12</td>
-                            <td>-2.4%</td>
-                        </tr>
-                        <tr>
-                            <td>Year 3</td>
-                            <td>100</td>
-                            <td>-0.12</td>
-                            <td>-1.5%</td>
-                            <td>0.33</td>
-                            <td>6.6%</td>
-                        </tr>
-                        <tr>
-                            <td>Year 5</td>
-                            <td>150</td>
-                            <td>0.58</td>
-                            <td>7.5%</td>
-                            <td>0.82</td>
-                            <td>16.4%</td>
-                        </tr>
-                        <tr>
-                            <td>Year 10</td>
-                            <td>300</td>
-                            <td>1.18</td>
-                            <td>310.0%</td>
-                            <td>1.58</td>
-                            <td>410.0%</td>
-                        </tr>
-                    </tbody>
-                </table>
                 <div class="footer">
                     <p>Delta State CNG Mass Transit Initiative</p>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 10: Case Studies & Testimonials -->
+        <!-- Slide 11: Case Studies & Testimonials -->
         <div id="slide10" class="slide">
             <div class="slide-content">
                 <div class="slide-header">
@@ -671,7 +593,7 @@
                     <div class="column">
                         <h3>Nigerian States with CNG Initiatives</h3>
                         <div class="phase-box">
-                            <div class="phase-title">Enugu State</div>
+                            <div class="phase-title"><strong>Enugu State</strong></div>
                             <ul class="bullet-list">
                                 <li>Inaugurated 100 out of 200 acquired CNG mass transit buses</li>
                                 <li>Comprehensive statewide implementation</li>
@@ -679,7 +601,7 @@
                         </div>
                         
                         <div class="phase-box">
-                            <div class="phase-title">Federal Capital Territory (FCT)</div>
+                            <div class="phase-title"><strong>Federal Capital Territory (FCT)</strong></div>
                             <ul class="bullet-list">
                                 <li>Received four 50-seater hybrid CNG buses from Presidential CNG Initiative</li>
                                 <li>Improving public transportation in the capital</li>
@@ -687,7 +609,7 @@
                         </div>
                         
                         <div class="phase-box">
-                            <div class="phase-title">Kogi, Kwara & Ogun States</div>
+                            <div class="phase-title"><strong>Kogi, Kwara & Ogun States</strong></div>
                             <ul class="bullet-list">
                                 <li>Kogi: Launched PCNG project with 10 CNG-powered buses</li>
                                 <li>Kwara: Received 20 CNG-powered vehicles and unveiled CNG buses and tricycles</li>
@@ -696,7 +618,7 @@
                         </div>
                         
                         <div class="phase-box">
-                            <div class="phase-title">Oyo State</div>
+                            <div class="phase-title"><strong>Oyo State</strong></div>
                             <ul class="bullet-list">
                                 <li>Received 20 CNG buses from Federal Government</li>
                                 <li>Commenced first phase of vehicle conversions</li>
@@ -715,10 +637,6 @@
                             "The CNG buses are much quieter and don't emit black smoke like the old diesel buses. As a driver, I spend 10 hours a day in the vehicle, and the difference in air quality inside the cabin is remarkable."
                             <p><strong>- Emmanuel Adegoke, Bus Driver, Abuja</strong></p>
                         </div>
-                        
-                        <div class="chart-container">
-                            <canvas id="caseStudyChart"></canvas>
-                        </div>
                     </div>
                 </div>
                 <div class="footer">
@@ -727,150 +645,42 @@
             </div>
         </div>
 
-        <!-- Slide 11: Implementation Plan -->
-        <div id="slide11" class="slide">
-            <div class="slide-content">
-                <div class="slide-header">
-                    <h2>Implementation Plan 🗺️</h2>
-                </div>
-                <div class="split-content">
-                    <div class="column">
-                        <h3>PPP Implementation Approach</h3>
-                        <div class="phase-box">
-                            <div class="phase-title">Phase 1: Pilot (6 months)</div>
-                            <ul class="bullet-list">
-                                <li>Deploy 50 CNG buses in Asaba & Warri</li>
-                                <li>Partner with private investors for 4 mobile refueling units</li>
-                                <li>Train drivers and maintenance staff</li>
-                                <li>Establish monitoring systems</li>
-                                <li>Gather operational data and feedback</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="phase-box">
-                            <div class="phase-title">Phase 2: Expansion (12 months)</div>
-                            <ul class="bullet-list">
-                                <li>Expand to 6 major hubs across Delta State</li>
-                                <li>Increase fleet to 150 buses</li>
-                                <li>Private partners establish 6 permanent refueling stations</li>
-                                <li>Implement digital payment systems</li>
-                                <li>Optimize routes based on Phase 1 data</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="phase-box">
-                            <div class="phase-title">Phase 3: Statewide Rollout (24 months)</div>
-                            <ul class="bullet-list">
-                                <li>Expand to all major cities and towns</li>
-                                <li>Scale to 300+ buses</li>
-                                <li>Comprehensive PPP-funded CNG infrastructure network</li>
-                                <li>Integration with other transport modes</li>
-                                <li>Full digital operations platform</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="map-container">
-                            <img src="images/delta_state_map.png" alt="Delta State Implementation Map" style="width: 100%; height: 100%; object-fit: cover;">
-                        </div>
-                        
-                        <div class="highlight-box">
-                            <h3>Key Implementation Milestones</h3>
-                            <ul class="bullet-list">
-                                <li>Month 1: Feasibility study completion</li>
-                                <li>Month 3: First 25 buses delivered</li>
-                                <li>Month 4: First mobile refueling unit operational</li>
-                                <li>Month 6: Full pilot fleet operational</li>
-                                <li>Month 12: First permanent CNG station</li>
-                                <li>Month 24: 50% of target routes covered</li>
-                                <li>Month 36: Complete statewide coverage</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer">
-                    <p>Delta State CNG Mass Transit Initiative</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 12: Fleet & Infrastructure -->
+        <!-- Slide 12: Our Partners -->
         <div id="slide12" class="slide">
             <div class="slide-content">
                 <div class="slide-header">
-                    <h2>Fleet & Infrastructure 🔧</h2>
+                    <h2>Our Partners 🤝</h2>
                 </div>
-                <div class="split-content">
-                    <div class="column">
-                        <h3>Recommended Fleet</h3>
-                        <ul class="bullet-list">
-                            <li><strong>KING LONG XMQ6127G</strong>
-                                <ul>
-                                    <li>35-40 passenger capacity</li>
-                                    <li>Advanced CNG engine technology</li>
-                                    <li>Low floor for easy access</li>
-                                    <li>Proven reliability in similar markets</li>
-                                    <li>Modern amenities and passenger comfort</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        
-                        <h3>Maintenance Support</h3>
-                        <ul class="bullet-list">
-                            <li>Local spare parts inventory</li>
-                            <li>Specialized CNG technician training</li>
-                            <li>Mobile maintenance units</li>
-                            <li>Preventive maintenance scheduling</li>
-                        </ul>
-                    </div>
-                    <div class="column">
-                        <h3>CNG Infrastructure</h3>
-                        <ul class="bullet-list">
-                            <li><strong>Phase 1: Mobile Solutions</strong>
-                                <ul>
-                                    <li>4 mobile refueling units </li>
-                                    <li>Capacity: 25 buses each</li>
-                                    <li>Deployment at strategic bus depots</li>
-                                    <li>Rapid deployment capability</li>
-                                </ul>
-                            </li>
-                            <li><strong>Phase 2: Fixed Stations</strong>
-                                <ul>
-                                    <li>6 permanent CNG stations </li>
-                                    <li>Strategic locations in Asaba, Warri, and other major cities</li>
-                                    <li>Public access capability</li>
-                                    <li>High-volume capacity</li>
-                                </ul>
-                            </li>
-                            <li><strong>Training & Service Facilities</strong>
-                                <ul>
-                                    <li>3 technical training centers (₦80M each)</li>
-                                    <li>4 service centers across Delta State (₦90M each)</li>
-                                    <li>Specialized CNG maintenance equipment</li>
-                                    <li>Spare parts inventory management</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        
-                        <div class="image-container">
-                            <div class="comparison-image">
-                                <img src="images/king-long-XMQ6127G.jpg" alt="YUTONG E12 PRO Exterior" class="slide-image">
-                                <img src="images/yutong_e12_interior.jpg" alt="YUTONG E12 PRO Interior" class="slide-image">
+                <div class="partners-container">
+                    <div class="partners-grid">
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="assets/dana-motors-logo.png" alt="Dana Motors Logo" class="partner-logo-img">
                             </div>
-                            <p><em>"The king-long-XMQ6127G offers modern design, passenger comfort, and operational efficiency"</em></p>
+                            <div class="partner-name">Dana Motors</div>
                         </div>
-                        <div class="image-container">
-                            <div class="comparison-image">
-                                <img src="images/cng_bus_interior.jpg" alt="CNG Bus Interior" class="slide-image">
-                                <img src="images/cng_refueling.jpg" alt="CNG Refueling" class="slide-image">
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="assets/kojo-motors-logo.png" alt="Kojo Motors Logo" class="partner-logo-img">
                             </div>
-                            <p><em>"Modern interiors and efficient refueling systems ensure passenger comfort and operational efficiency"</em></p>
+                            <div class="partner-name">Kojo Motors</div>
+                        </div>
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="assets/chincarcar-logo.png" alt="ChinCarCar Motors Logo" class="partner-logo-img">
+                            </div>
+                            <div class="partner-name">ChinCarCar Motors</div>
+                        </div>
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="assets/Kinglong-logo.png" alt="KingLong Motors Logo" class="partner-logo-img">
+                            </div>
+                            <div class="partner-name">KingLong Motors</div>
                         </div>
                     </div>
                 </div>
-                <div class="highlight-box">
-                    <h3>Safety Features</h3>
-                    <p>All CNG buses are equipped with advanced safety features including leak detection systems, automatic shutdown valves, and reinforced CNG tanks that exceed international safety standards. CNG is actually safer than liquid fuels in many accident scenarios.</p>
+                <div class="partners-description">
+                    <p><em>Strategic partnerships with leading automotive manufacturers to deliver world-class CNG bus solutions for Delta State.</em></p>
                 </div>
                 <div class="footer">
                     <p>Delta State CNG Mass Transit Initiative</p>
@@ -920,8 +730,8 @@
                         </ul>
                         
                         <div class="image-container">
-                            <img src="images/clean_environment.jpg" alt="Clean Urban Environment" class="slide-image">
-                            <p><em>"Cleaner air, healthier communities: The environmental dividend of CNG transit"</em></p>
+                            <img src="assets/clean_environment.jpg" alt="Clean Urban Environment" class="feature-img">
+                            <p class="image-caption"><em>"Cleaner air, healthier communities: The environmental dividend of CNG transit"</em></p>
                         </div>
                     </div>
                 </div>
@@ -939,13 +749,13 @@
                 </div>
                 <div class="split-content">
                     <div class="column">
-                        <h3>Quadruple Win Solution with PPP Approach</h3>
+                        <h3>Triple Win Solution</h3>
                         <ul class="bullet-list">
                             <li><strong>Economic Win</strong>
                                 <ul>
-                                    <li>₦1.1B+ annual savings</li>
+                                    <li>Steady annual revenue potential</li>
                                     <li>New jobs in green transport</li>
-                                    <li>Reduced transport costs for citizens</li>
+                                    <li>Affordable transport for citizens</li>
                                     <li>Sustainable business model</li>
                                 </ul>
                             </li>
@@ -965,14 +775,6 @@
                                     <li>Creates positive public perception</li>
                                 </ul>
                             </li>
-                            <li><strong>Financial Win</strong>
-                                <ul>
-                                    <li>38% less government capital required</li>
-                                    <li>Faster ROI through PPP model</li>
-                                    <li>Shared risk with private partners</li>
-                                    <li>Sustainable revenue through fuel commissions</li>
-                                </ul>
-                            </li>
                         </ul>
                     </div>
                     <div class="column">
@@ -980,9 +782,8 @@
                             <h3>Next Steps</h3>
                             <ol class="bullet-list">
                                 <li>Approve detailed feasibility study (2 weeks)</li>
-                                <li>Establish PPP framework with Origin Innovation and private investors (30 days)</li>
-                                <li>Secure initial funding allocation for government portion (45 days)</li>
-                                <li>Finalize private partner agreements for infrastructure (60 days)</li>
+                                <li>Establish PPP framework with Origin Innovation (30 days)</li>
+                                <li>Secure initial funding allocation (45 days)</li>
                                 <li>Launch 90-day pilot program (Q3 2025)</li>
                             </ol>
                         </div>
@@ -993,43 +794,44 @@
                         </div>
                         
                         <div class="image-container">
-                            <img src="images/future_vision.jpg" alt="Future Vision of Delta State Transport" class="slide-image">
-                            <p><em>"The future of transportation in Delta State: clean, affordable, and sustainable"</em></p>
+                            <img src="assets/future_vision.jpg" alt="Future Vision of Delta State Transport" class="feature-img">
+                            <p class="image-caption"><em>"The future of transportation in Delta State: clean, affordable, and sustainable"</em></p>
                         </div>
                     </div>
                 </div>
                 <div class="footer">
-                    <p>Delta State CNG Mass Transit Initiative | Contact: info@origininnovation.ng | Tel: +234-808-903-0000</p>
+                    <p>Website: www.origininnovationltd.com | Contact: info@origininnovation.com | Tel: +234-808-903-0000</p><br>
+                </div>
+            </div>
+        </div>
+
+        <!-- Annex: CNG Mother Station Equipment -->
+        <div id="annex" class="slide annex-slide">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <h2>CNG Mother Station Equipment 📋</h2>
+                </div>
+                <div class="pdf-container">
+                    <iframe src="CIF APAPA10bar 2000Nm³ Mother Station (no price).pdf" width="100%" height="600px" frameborder="0"></iframe>
+                    <p class="pdf-caption"><em>Technical specifications for CIF APAPA10bar 2000Nm³ Mother Station equipment</em></p>
+                </div>
+                <div class="footer">
+                    <p>Delta State CNG Mass Transit Initiative</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="js/charts.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const navToggle = document.getElementById('navToggle');
-            const slideNav = document.getElementById('slideNav');
-            
-            navToggle.addEventListener('click', function() {
-                slideNav.classList.toggle('active');
-            });
-            
-            // Close menu when clicking a link
-            const navLinks = document.querySelectorAll('.slide-nav a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    slideNav.classList.remove('active');
-                });
-            });
-            
-            // Close menu when clicking outside
-            document.addEventListener('click', function(event) {
-                if (!event.target.closest('.slide-nav') && !event.target.closest('.nav-toggle')) {
-                    slideNav.classList.remove('active');
-                }
-            });
-        });
-    </script>
+
+    <!-- Image Modal/Lightbox -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="modalCaption"></div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/charts(2).js"></script>
 </body>
 </html>
